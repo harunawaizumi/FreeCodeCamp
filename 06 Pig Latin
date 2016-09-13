@@ -1,0 +1,25 @@
+
+function translatePigLatin(str) {
+  var letters = str.split('');
+  
+  if (isVowel(letters[0])) {
+    letters.push('w');
+  } else {
+    letters.push(letters[0]);
+    letters.shift();
+    if (!isVowel(letters[0])){
+      letters.push(letters[0]);
+      letters.shift();
+    }
+  }
+  letters.push('ay');
+  str = letters.join('');
+  return str;
+}
+
+function isVowel(letter){
+  var vowels = ['a','e','i','o','u'];
+  return vowels.indexOf(letter) >=0;
+}
+
+translatePigLatin("consonant");
