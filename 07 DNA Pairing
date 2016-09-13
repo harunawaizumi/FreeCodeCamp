@@ -1,0 +1,24 @@
+
+function pairElement(str) {
+  var letters = str.split("");  //['A'"T''C'"G''A'];
+
+  var check = {
+    "A":"T",
+    "T":"A",
+    "G":"C",
+    "C":"G"
+  };
+  var words = [];
+  
+  for (var i =0; i < letters.length; i++){
+    var item = [];
+    var firstWord = letters[i]; //'A'
+    //letters.shift(); //["T''C'"G''A'];
+    item.push(firstWord); //[['A']];
+    item.push(check[firstWord]); 
+    words.push(item);
+  }
+  return words;
+}
+
+pairElement("GTACG");
