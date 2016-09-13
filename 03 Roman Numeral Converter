@@ -1,0 +1,23 @@
+function convertToRoman(num) {
+  var lookup = [
+    ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+    ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+    ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC','DCCC', 'CM'],
+    ['', 'M', 'MM', 'MMM',]
+  ];
+  // 1234
+  var digits = num.toString().split(""); //'1''2''3''4'
+  
+  var reversed_digits = digits.reverse(); //'4''3''2''1'
+  
+  var roman = [];
+  
+  reversed_digits.forEach((digits, i) => {
+    roman.unshift(lookup[i][digits]);
+  });
+  
+  
+ return roman.join('');
+}
+
+convertToRoman(3999); //MMMCMXCIX
