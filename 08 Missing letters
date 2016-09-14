@@ -1,0 +1,14 @@
+```javascript
+function fearNotLetter(str) {
+  for (var i = 0; i < str.length - 1; i++){
+    var num = str.charCodeAt(i);
+    var numnext = str.charCodeAt(i + 1);
+    if ( num + 1 !== numnext ){
+      var alpha = String.fromCharCode(num + 1);
+      return alpha;
+    }
+  }
+  return undefined;
+}
+
+```
