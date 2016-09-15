@@ -1,0 +1,21 @@
+// important
+function sumFibs(num) {
+  var currnum = 1;
+  var prevnum = 0;
+  var sum = 0;
+  
+  while( currnum <= num ){ 
+    
+    if( currnum % 2 !== 0 ){
+      sum += currnum;
+    }
+    
+    var added = currnum + prevnum;
+    sum = currnum;
+    currnum = added;
+    
+  }
+  return sum;
+}
+
+sumFibs(1000);
