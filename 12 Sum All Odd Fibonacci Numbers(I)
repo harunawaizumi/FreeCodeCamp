@@ -11,7 +11,7 @@ function sumFibs(num) {
     }
     
     var added = currnum + prevnum;
-    sum = currnum;
+    prevnum = currnum;
     currnum = added;
     
   }
